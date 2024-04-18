@@ -175,7 +175,11 @@
             // 
             // CategoryComboBox
             // 
+            this.CategoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoryComboBox.FormattingEnabled = true;
+            this.CategoryComboBox.Items.AddRange(new object[] {
+            "LEC",
+            "LAB"});
             this.CategoryComboBox.Location = new System.Drawing.Point(298, 188);
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(121, 21);
@@ -183,7 +187,12 @@
             // 
             // OfferingComboBox
             // 
+            this.OfferingComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.OfferingComboBox.FormattingEnabled = true;
+            this.OfferingComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
             this.OfferingComboBox.Location = new System.Drawing.Point(298, 159);
             this.OfferingComboBox.Name = "OfferingComboBox";
             this.OfferingComboBox.Size = new System.Drawing.Size(121, 21);
