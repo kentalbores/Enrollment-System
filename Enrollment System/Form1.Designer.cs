@@ -39,18 +39,26 @@
             this.SubjectCodeTextBox = new System.Windows.Forms.TextBox();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
             this.UnitsTextBox = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.OfferingComboBox = new System.Windows.Forms.ComboBox();
+            this.CourseCodeComboBox = new System.Windows.Forms.ComboBox();
+            this.RequisiteTextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SubjectCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Units = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PreRequisite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(328, 42);
+            this.label1.Location = new System.Drawing.Point(329, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 0;
@@ -140,16 +148,9 @@
             this.UnitsTextBox.Size = new System.Drawing.Size(100, 20);
             this.UnitsTextBox.TabIndex = 1;
             // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(298, 213);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 1;
-            // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(298, 237);
+            this.textBox7.Location = new System.Drawing.Point(298, 244);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 1;
@@ -198,17 +199,95 @@
             this.OfferingComboBox.Size = new System.Drawing.Size(121, 21);
             this.OfferingComboBox.TabIndex = 4;
             // 
+            // CourseCodeComboBox
+            // 
+            this.CourseCodeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CourseCodeComboBox.FormattingEnabled = true;
+            this.CourseCodeComboBox.Items.AddRange(new object[] {
+            "BSIT",
+            "BSIS",
+            "ACT",
+            "BSMT",
+            "BSCRIM",
+            "BSA",
+            "BSBA",
+            "BSED",
+            "BEED",
+            "BSN",
+            "JD",
+            "MED"});
+            this.CourseCodeComboBox.Location = new System.Drawing.Point(298, 215);
+            this.CourseCodeComboBox.Name = "CourseCodeComboBox";
+            this.CourseCodeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.CourseCodeComboBox.TabIndex = 4;
+            // 
+            // RequisiteTextBox
+            // 
+            this.RequisiteTextBox.Location = new System.Drawing.Point(178, 332);
+            this.RequisiteTextBox.Name = "RequisiteTextBox";
+            this.RequisiteTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RequisiteTextBox.TabIndex = 5;
+            this.RequisiteTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RequisiteTextBox_KeyPress);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(98, 335);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Requisite";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SubjectCode,
+            this.Description,
+            this.Units,
+            this.PreRequisite});
+            this.dataGridView1.Location = new System.Drawing.Point(63, 358);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(467, 150);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // SubjectCode
+            // 
+            this.SubjectCode.HeaderText = "Subject Code";
+            this.SubjectCode.Name = "SubjectCode";
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            // 
+            // Units
+            // 
+            this.Units.HeaderText = "Units";
+            this.Units.Name = "Units";
+            // 
+            // PreRequisite
+            // 
+            this.PreRequisite.HeaderText = "Co/Pre";
+            this.PreRequisite.Name = "PreRequisite";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(800, 547);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.RequisiteTextBox);
             this.Controls.Add(this.OfferingComboBox);
+            this.Controls.Add(this.CourseCodeComboBox);
             this.Controls.Add(this.CategoryComboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.UnitsTextBox);
             this.Controls.Add(this.DescriptionTextBox);
             this.Controls.Add(this.SubjectCodeTextBox);
@@ -223,6 +302,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,12 +321,19 @@
         private System.Windows.Forms.TextBox SubjectCodeTextBox;
         private System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.TextBox UnitsTextBox;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox CategoryComboBox;
         private System.Windows.Forms.ComboBox OfferingComboBox;
+        private System.Windows.Forms.ComboBox CourseCodeComboBox;
+        private System.Windows.Forms.TextBox RequisiteTextBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Units;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PreRequisite;
     }
 }
 

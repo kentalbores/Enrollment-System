@@ -48,5 +48,10 @@ namespace Enrollment_System
             MessageBox.Show("Entries Recorded");
 
         }
+
+        private void RequisiteTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }
