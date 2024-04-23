@@ -39,7 +39,7 @@
             this.SubjectCodeTextBox = new System.Windows.Forms.TextBox();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
             this.UnitsTextBox = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.CurrYearTextBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
@@ -47,12 +47,13 @@
             this.CourseCodeComboBox = new System.Windows.Forms.ComboBox();
             this.RequisiteTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SubjectCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Units = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubjectDataGridView = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.SubjectCodeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PreRequisite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -148,12 +149,12 @@
             this.UnitsTextBox.Size = new System.Drawing.Size(100, 20);
             this.UnitsTextBox.TabIndex = 1;
             // 
-            // textBox7
+            // CurrYearTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(298, 244);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 1;
+            this.CurrYearTextBox.Location = new System.Drawing.Point(298, 244);
+            this.CurrYearTextBox.Name = "CurrYearTextBox";
+            this.CurrYearTextBox.Size = new System.Drawing.Size(100, 20);
+            this.CurrYearTextBox.TabIndex = 1;
             // 
             // SaveButton
             // 
@@ -232,41 +233,51 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(98, 335);
+            this.label9.Location = new System.Drawing.Point(60, 304);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 6;
             this.label9.Text = "Requisite";
             // 
-            // dataGridView1
+            // SubjectDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SubjectCode,
-            this.Description,
-            this.Units,
+            this.SubjectDataGridView.AllowUserToAddRows = false;
+            this.SubjectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SubjectDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SubjectCodeColumn,
+            this.DescriptionColumn,
+            this.UnitsColumn,
             this.PreRequisite});
-            this.dataGridView1.Location = new System.Drawing.Point(63, 358);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(467, 150);
-            this.dataGridView1.TabIndex = 7;
+            this.SubjectDataGridView.Location = new System.Drawing.Point(63, 358);
+            this.SubjectDataGridView.Name = "SubjectDataGridView";
+            this.SubjectDataGridView.RowHeadersVisible = false;
+            this.SubjectDataGridView.Size = new System.Drawing.Size(467, 150);
+            this.SubjectDataGridView.TabIndex = 7;
+            this.SubjectDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RequisiteTextBox_KeyPress);
             // 
-            // SubjectCode
+            // label10
             // 
-            this.SubjectCode.HeaderText = "Subject Code";
-            this.SubjectCode.Name = "SubjectCode";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(81, 332);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Subject Code";
             // 
-            // Description
+            // SubjectCodeColumn
             // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
+            this.SubjectCodeColumn.HeaderText = "Subject Code";
+            this.SubjectCodeColumn.Name = "SubjectCodeColumn";
             // 
-            // Units
+            // DescriptionColumn
             // 
-            this.Units.HeaderText = "Units";
-            this.Units.Name = "Units";
+            this.DescriptionColumn.HeaderText = "Description";
+            this.DescriptionColumn.Name = "DescriptionColumn";
+            // 
+            // UnitsColumn
+            // 
+            this.UnitsColumn.HeaderText = "Units";
+            this.UnitsColumn.Name = "UnitsColumn";
             // 
             // PreRequisite
             // 
@@ -279,7 +290,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(800, 547);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.SubjectDataGridView);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.RequisiteTextBox);
             this.Controls.Add(this.OfferingComboBox);
@@ -287,7 +299,7 @@
             this.Controls.Add(this.CategoryComboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.CurrYearTextBox);
             this.Controls.Add(this.UnitsTextBox);
             this.Controls.Add(this.DescriptionTextBox);
             this.Controls.Add(this.SubjectCodeTextBox);
@@ -301,8 +313,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,7 +332,7 @@
         private System.Windows.Forms.TextBox SubjectCodeTextBox;
         private System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.TextBox UnitsTextBox;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox CurrYearTextBox;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox CategoryComboBox;
@@ -329,10 +340,11 @@
         private System.Windows.Forms.ComboBox CourseCodeComboBox;
         private System.Windows.Forms.TextBox RequisiteTextBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Units;
+        private System.Windows.Forms.DataGridView SubjectDataGridView;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectCodeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitsColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn PreRequisite;
     }
 }
