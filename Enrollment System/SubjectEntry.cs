@@ -42,7 +42,34 @@ namespace Enrollment_System
             thisDataSet.Tables["SubjectFile"].Rows.Add(thisRow);
             thisAdapter.Update(thisDataSet, "SubjectFile");
 
+
+            string categ = "";
+            categ += PreReqRadioButton.Checked ? "PR" : "CR"; 
+
+
+
+            //requisites
+            sql = "SELECT * FROM SUBJECTPREQFILE";
+            thisAdapter = new OleDbDataAdapter(sql, thisConnection);
+            thisBuilder = new OleDbCommandBuilder(thisAdapter);
+            thisDataSet = new DataSet();
+            thisAdapter.Fill(thisDataSet, "SubjectPreqFile");
+            thisRow = thisDataSet.Tables["SubjectPreqFile"].NewRow();
+
+            
+            
+            thisRow["SUBJCODE"] = SubjectCodeTextBox.Text;
+            thisRow["SUBJPRECODE"] = RequisiteTextBox.Text;
+            thisRow["SUBJCATEGORY"] = categ;
+
+            thisDataSet.Tables["SubjectPreqFile"].Rows.Add(thisRow);
+            thisAdapter.Update(thisDataSet, "SubjectPreqFile");
+
+
+
+
             MessageBox.Show("Entries Recorded");
+
 
         }
 
@@ -63,6 +90,7 @@ namespace Enrollment_System
                 string subjectCode = "";
                 string description = "";
                 string units = "";
+                string category = "";
 
                 while (thisDataReader.Read())
                 {
@@ -73,9 +101,26 @@ namespace Enrollment_System
                         subjectCode = thisDataReader["SFSUBJCODE"].ToString();
                         description = thisDataReader["SFSUBJDESC"].ToString();
                         units = thisDataReader["SFSUBJUNITS"].ToString();
-
+                        
                         break;
                         //
+                    }
+
+                }
+                thisDataReader.Close();
+
+                //subjectpreqfilereader
+                sql = "SELECT * FROM SUBJECTPREQFILE";
+                thisCommand.CommandText = sql;
+                OleDbDataReader anotherDataReader = thisCommand.ExecuteReader();
+
+                while (anotherDataReader.Read())
+                {
+                    if (anotherDataReader["SUBJCODE"].ToString().Trim().ToUpper() == RequisiteTextBox.Text.Trim().ToUpper())
+                    {
+                        found = true;
+                        category = anotherDataReader["SUBJPRECODE"].ToString();
+                        break;
                     }
 
                 }
@@ -89,7 +134,8 @@ namespace Enrollment_System
                     SubjectDataGridView.Rows[index].Cells["SubjectCodeColumn"].Value = subjectCode;
                     SubjectDataGridView.Rows[index].Cells["DescriptionColumn"].Value = description;
                     SubjectDataGridView.Rows[index].Cells["UnitsColumn"].Value = units;
-                }
+                    SubjectDataGridView.Rows[index].Cells["PreRequisiteColumn"].Value = category;
+                };
 
                 //
             }

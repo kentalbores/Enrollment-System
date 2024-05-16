@@ -37,10 +37,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.SubjectDataGridView = new System.Windows.Forms.DataGridView();
-            this.SubjectCodeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PreRequisite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RequisiteTextBox = new System.Windows.Forms.TextBox();
             this.OfferingComboBox = new System.Windows.Forms.ComboBox();
             this.CourseCodeComboBox = new System.Windows.Forms.ComboBox();
@@ -59,6 +55,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.SubjectCodeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PreRequisiteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +101,6 @@
             this.CoReqRadioButton.Name = "CoReqRadioButton";
             this.CoReqRadioButton.Size = new System.Drawing.Size(104, 32);
             this.CoReqRadioButton.TabIndex = 39;
-            this.CoReqRadioButton.TabStop = true;
             this.CoReqRadioButton.Text = "Co-Requisite";
             this.CoReqRadioButton.UseVisualStyleBackColor = false;
             // 
@@ -110,6 +109,7 @@
             this.PreReqRadioButton.AutoSize = true;
             this.PreReqRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.PreReqRadioButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PreReqRadioButton.Checked = true;
             this.PreReqRadioButton.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PreReqRadioButton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.PreReqRadioButton.Location = new System.Drawing.Point(422, 265);
@@ -164,33 +164,13 @@
             this.SubjectCodeColumn,
             this.DescriptionColumn,
             this.UnitsColumn,
-            this.PreRequisite});
+            this.PreRequisiteColumn});
             this.SubjectDataGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.SubjectDataGridView.Location = new System.Drawing.Point(119, 333);
             this.SubjectDataGridView.Name = "SubjectDataGridView";
             this.SubjectDataGridView.RowHeadersVisible = false;
             this.SubjectDataGridView.Size = new System.Drawing.Size(419, 164);
             this.SubjectDataGridView.TabIndex = 34;
-            // 
-            // SubjectCodeColumn
-            // 
-            this.SubjectCodeColumn.HeaderText = "Subject Code";
-            this.SubjectCodeColumn.Name = "SubjectCodeColumn";
-            // 
-            // DescriptionColumn
-            // 
-            this.DescriptionColumn.HeaderText = "Description";
-            this.DescriptionColumn.Name = "DescriptionColumn";
-            // 
-            // UnitsColumn
-            // 
-            this.UnitsColumn.HeaderText = "Units";
-            this.UnitsColumn.Name = "UnitsColumn";
-            // 
-            // PreRequisite
-            // 
-            this.PreRequisite.HeaderText = "Co/Pre";
-            this.PreRequisite.Name = "PreRequisite";
             // 
             // RequisiteTextBox
             // 
@@ -391,6 +371,26 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Subject Entry";
             // 
+            // SubjectCodeColumn
+            // 
+            this.SubjectCodeColumn.HeaderText = "Subject Code";
+            this.SubjectCodeColumn.Name = "SubjectCodeColumn";
+            // 
+            // DescriptionColumn
+            // 
+            this.DescriptionColumn.HeaderText = "Description";
+            this.DescriptionColumn.Name = "DescriptionColumn";
+            // 
+            // UnitsColumn
+            // 
+            this.UnitsColumn.HeaderText = "Units";
+            this.UnitsColumn.Name = "UnitsColumn";
+            // 
+            // PreRequisiteColumn
+            // 
+            this.PreRequisiteColumn.HeaderText = "Co/Pre";
+            this.PreRequisiteColumn.Name = "PreRequisiteColumn";
+            // 
             // SubjectEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,10 +443,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView SubjectDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectCodeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitsColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PreRequisite;
         private System.Windows.Forms.TextBox RequisiteTextBox;
         private System.Windows.Forms.ComboBox OfferingComboBox;
         private System.Windows.Forms.ComboBox CourseCodeComboBox;
@@ -465,5 +461,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectCodeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PreRequisiteColumn;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.DescriptionTextBox = new System.Windows.Forms.TextBox();
             this.SubjectCodeTextBox = new System.Windows.Forms.TextBox();
             this.EDPCodeTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.StartTimePicker = new System.Windows.Forms.DateTimePicker();
             this.EndTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -67,13 +67,6 @@
             this.label1.Size = new System.Drawing.Size(394, 41);
             this.label1.TabIndex = 2;
             this.label1.Text = "Subject Schedule Entry";
-            // 
-            // DescriptionTextBox
-            // 
-            this.DescriptionTextBox.Location = new System.Drawing.Point(169, 161);
-            this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(100, 20);
-            this.DescriptionTextBox.TabIndex = 14;
             // 
             // SubjectCodeTextBox
             // 
@@ -277,6 +270,7 @@
             this.SaveButton.TabIndex = 36;
             this.SaveButton.Text = "SAVE";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // StartTimePicker
             // 
@@ -294,12 +288,22 @@
             this.EndTimePicker.Size = new System.Drawing.Size(100, 20);
             this.EndTimePicker.TabIndex = 41;
             // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.BackColor = System.Drawing.Color.MintCream;
+            this.DescriptionLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DescriptionLabel.Location = new System.Drawing.Point(169, 160);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(100, 23);
+            this.DescriptionLabel.TabIndex = 42;
+            // 
             // SubjectScheduleEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(681, 360);
+            this.Controls.Add(this.DescriptionLabel);
             this.Controls.Add(this.EndTimePicker);
             this.Controls.Add(this.StartTimePicker);
             this.Controls.Add(this.NextButton);
@@ -318,7 +322,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.DescriptionTextBox);
             this.Controls.Add(this.SubjectCodeTextBox);
             this.Controls.Add(this.EDPCodeTextBox);
             this.Controls.Add(this.label4);
@@ -335,7 +338,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.TextBox SubjectCodeTextBox;
         private System.Windows.Forms.TextBox EDPCodeTextBox;
         private System.Windows.Forms.Label label4;
@@ -359,5 +361,6 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.DateTimePicker StartTimePicker;
         private System.Windows.Forms.DateTimePicker EndTimePicker;
+        private System.Windows.Forms.Label DescriptionLabel;
     }
 }

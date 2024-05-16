@@ -37,7 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.EDPCodeTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SubjectDataGridView = new System.Windows.Forms.DataGridView();
             this.EDPCodeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StartTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndTimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +57,7 @@
             this.CourseLabel = new System.Windows.Forms.Label();
             this.YearLabel = new System.Windows.Forms.Label();
             this.TotalUnitsLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,6 +79,7 @@
             this.IDNoTextBox.Name = "IDNoTextBox";
             this.IDNoTextBox.Size = new System.Drawing.Size(100, 20);
             this.IDNoTextBox.TabIndex = 3;
+            this.IDNoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDNoTextBox_KeyPress);
             // 
             // label2
             // 
@@ -143,6 +144,7 @@
             this.EDPCodeTextBox.Name = "EDPCodeTextBox";
             this.EDPCodeTextBox.Size = new System.Drawing.Size(100, 20);
             this.EDPCodeTextBox.TabIndex = 12;
+            this.EDPCodeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EDPCodeTextBox_KeyPress);
             // 
             // label6
             // 
@@ -156,13 +158,13 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "EDP Code";
             // 
-            // dataGridView1
+            // SubjectDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SubjectDataGridView.AllowUserToAddRows = false;
+            this.SubjectDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SubjectDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.SubjectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SubjectDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EDPCodeCol,
             this.StartTimeColumn,
             this.EndTimeCol,
@@ -170,12 +172,12 @@
             this.RoomCol,
             this.UnitsCol,
             this.SubjectCodeCol});
-            this.dataGridView1.Location = new System.Drawing.Point(60, 269);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(662, 150);
-            this.dataGridView1.TabIndex = 13;
+            this.SubjectDataGridView.Location = new System.Drawing.Point(60, 269);
+            this.SubjectDataGridView.Name = "SubjectDataGridView";
+            this.SubjectDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SubjectDataGridView.RowHeadersVisible = false;
+            this.SubjectDataGridView.Size = new System.Drawing.Size(662, 150);
+            this.SubjectDataGridView.TabIndex = 13;
             // 
             // EDPCodeCol
             // 
@@ -343,7 +345,7 @@
             this.Controls.Add(this.EncoderTextBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.SubjectDataGridView);
             this.Controls.Add(this.EDPCodeTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -355,7 +357,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SubjectEnrollmentEntry";
             this.Text = "SubjectEnrollmentEntry";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,7 +374,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox EDPCodeTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView SubjectDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn EDPCodeCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartTimeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndTimeCol;
