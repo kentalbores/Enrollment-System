@@ -9,3 +9,17 @@
 \\Server2\second semester 2023-2024\LAB802\79866_CC_APPSDEV22_1200_0130_PM_TTH\79866-23231715\Desktop\Finals\Enrollment System\Enrollment System\obj\Debug\Enrollment System.csproj.CoreCompileInputs.cache
 \\Server2\second semester 2023-2024\LAB802\79866_CC_APPSDEV22_1200_0130_PM_TTH\79866-23231715\Desktop\Finals\Enrollment System\Enrollment System\obj\Debug\Enrollment System.exe
 \\Server2\second semester 2023-2024\LAB802\79866_CC_APPSDEV22_1200_0130_PM_TTH\79866-23231715\Desktop\Finals\Enrollment System\Enrollment System\obj\Debug\Enrollment System.pdb
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\bin\Debug\Albores.accdb
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\bin\Debug\Enrollment System.exe.config
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\bin\Debug\Enrollment System.exe
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\bin\Debug\Enrollment System.pdb
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment System.csproj.AssemblyReference.cache
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment_System.Form1.resources
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment_System.Properties.Resources.resources
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment System.csproj.GenerateResource.cache
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment System.csproj.CoreCompileInputs.cache
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment System.exe
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment System.pdb
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment_System.SubjectEnrollmentEntry.resources
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment_System.SubjectScheduleEntry.resources
+C:\Users\Kent Albores\OneDrive\Desktop\AppsDev\Enrollment-System\Enrollment System\obj\Debug\Enrollment_System.SubjectEntry.resources

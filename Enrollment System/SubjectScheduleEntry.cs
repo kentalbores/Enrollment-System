@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Enrollment_System
 {
-    public partial class Form1 : Form
+    public partial class SubjectScheduleEntry : Form
     {
-        public Form1()
+        public SubjectScheduleEntry()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void NextButton_Click(object sender, EventArgs e)
         {
-            SubjectEntry subjectEntry = new SubjectEntry();
-            subjectEntry.Show();
+            SubjectEnrollmentEntry entry = new SubjectEnrollmentEntry();
+            entry.Show();
             this.Hide();
         }
     }
