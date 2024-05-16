@@ -29,31 +29,30 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.UnitsTextBox = new System.Windows.Forms.TextBox();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SubjectCodeTextBox = new System.Windows.Forms.TextBox();
+            this.EDPCodeTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.RoomTextBox = new System.Windows.Forms.TextBox();
+            this.SectionTextBox = new System.Windows.Forms.TextBox();
+            this.DaysTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.SchoolYearTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.NextButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.StartTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.EndTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -69,26 +68,26 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Subject Schedule Entry";
             // 
-            // UnitsTextBox
-            // 
-            this.UnitsTextBox.Location = new System.Drawing.Point(169, 161);
-            this.UnitsTextBox.Name = "UnitsTextBox";
-            this.UnitsTextBox.Size = new System.Drawing.Size(100, 20);
-            this.UnitsTextBox.TabIndex = 14;
-            // 
             // DescriptionTextBox
             // 
-            this.DescriptionTextBox.Location = new System.Drawing.Point(169, 128);
+            this.DescriptionTextBox.Location = new System.Drawing.Point(169, 161);
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(100, 20);
-            this.DescriptionTextBox.TabIndex = 15;
+            this.DescriptionTextBox.TabIndex = 14;
             // 
-            // textBox1
+            // SubjectCodeTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 16;
+            this.SubjectCodeTextBox.Location = new System.Drawing.Point(169, 128);
+            this.SubjectCodeTextBox.Name = "SubjectCodeTextBox";
+            this.SubjectCodeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.SubjectCodeTextBox.TabIndex = 15;
+            // 
+            // EDPCodeTextBox
+            // 
+            this.EDPCodeTextBox.Location = new System.Drawing.Point(169, 96);
+            this.EDPCodeTextBox.Name = "EDPCodeTextBox";
+            this.EDPCodeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.EDPCodeTextBox.TabIndex = 16;
             // 
             // label4
             // 
@@ -126,26 +125,26 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "EDP Code";
             // 
-            // textBox2
+            // RoomTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(525, 158);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 20;
+            this.RoomTextBox.Location = new System.Drawing.Point(525, 158);
+            this.RoomTextBox.Name = "RoomTextBox";
+            this.RoomTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RoomTextBox.TabIndex = 20;
             // 
-            // textBox3
+            // SectionTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(525, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 21;
+            this.SectionTextBox.Location = new System.Drawing.Point(525, 125);
+            this.SectionTextBox.Name = "SectionTextBox";
+            this.SectionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.SectionTextBox.TabIndex = 21;
             // 
-            // textBox4
+            // DaysTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(525, 93);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 22;
+            this.DaysTextBox.Location = new System.Drawing.Point(525, 93);
+            this.DaysTextBox.Name = "DaysTextBox";
+            this.DaysTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DaysTextBox.TabIndex = 22;
             // 
             // label2
             // 
@@ -183,24 +182,12 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Days";
             // 
-            // textBox6
+            // SchoolYearTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(525, 194);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 26;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label8.Location = new System.Drawing.Point(275, 214);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 28);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "AM/PM";
+            this.SchoolYearTextBox.Location = new System.Drawing.Point(525, 194);
+            this.SchoolYearTextBox.Name = "SchoolYearTextBox";
+            this.SchoolYearTextBox.Size = new System.Drawing.Size(100, 20);
+            this.SchoolYearTextBox.TabIndex = 26;
             // 
             // label9
             // 
@@ -241,7 +228,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(343, 198);
+            this.comboBox1.Location = new System.Drawing.Point(296, 195);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(41, 21);
             this.comboBox1.TabIndex = 31;
@@ -249,26 +236,10 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(343, 230);
+            this.comboBox2.Location = new System.Drawing.Point(296, 227);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(41, 21);
             this.comboBox2.TabIndex = 33;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(166, 230);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(103, 21);
-            this.comboBox3.TabIndex = 35;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(166, 198);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(103, 21);
-            this.comboBox4.TabIndex = 34;
             // 
             // NextButton
             // 
@@ -280,23 +251,23 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
-            // button1
+            // BackButton
             // 
-            this.button1.Location = new System.Drawing.Point(361, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "BACK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BackButton.Location = new System.Drawing.Point(361, 288);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 38;
+            this.BackButton.Text = "BACK";
+            this.BackButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ClearButton
             // 
-            this.button2.Location = new System.Drawing.Point(246, 288);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "CLEAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ClearButton.Location = new System.Drawing.Point(246, 288);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearButton.TabIndex = 37;
+            this.ClearButton.Text = "CLEAR";
+            this.ClearButton.UseVisualStyleBackColor = true;
             // 
             // SaveButton
             // 
@@ -307,34 +278,49 @@
             this.SaveButton.Text = "SAVE";
             this.SaveButton.UseVisualStyleBackColor = true;
             // 
+            // StartTimePicker
+            // 
+            this.StartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.StartTimePicker.Location = new System.Drawing.Point(169, 194);
+            this.StartTimePicker.Name = "StartTimePicker";
+            this.StartTimePicker.Size = new System.Drawing.Size(100, 20);
+            this.StartTimePicker.TabIndex = 40;
+            // 
+            // EndTimePicker
+            // 
+            this.EndTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.EndTimePicker.Location = new System.Drawing.Point(169, 228);
+            this.EndTimePicker.Name = "EndTimePicker";
+            this.EndTimePicker.Size = new System.Drawing.Size(100, 20);
+            this.EndTimePicker.TabIndex = 41;
+            // 
             // SubjectScheduleEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(681, 360);
+            this.Controls.Add(this.EndTimePicker);
+            this.Controls.Add(this.StartTimePicker);
             this.Controls.Add(this.NextButton);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.SchoolYearTextBox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.RoomTextBox);
+            this.Controls.Add(this.SectionTextBox);
+            this.Controls.Add(this.DaysTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.UnitsTextBox);
             this.Controls.Add(this.DescriptionTextBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SubjectCodeTextBox);
+            this.Controls.Add(this.EDPCodeTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
@@ -349,30 +335,29 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox UnitsTextBox;
         private System.Windows.Forms.TextBox DescriptionTextBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SubjectCodeTextBox;
+        private System.Windows.Forms.TextBox EDPCodeTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox RoomTextBox;
+        private System.Windows.Forms.TextBox SectionTextBox;
+        private System.Windows.Forms.TextBox DaysTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox SchoolYearTextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.DateTimePicker StartTimePicker;
+        private System.Windows.Forms.DateTimePicker EndTimePicker;
     }
 }

@@ -30,9 +30,9 @@
         {
             this.button4 = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.CoReqRadioButton = new System.Windows.Forms.RadioButton();
+            this.PreReqRadioButton = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.OfferingComboBox = new System.Windows.Forms.ComboBox();
             this.CourseCodeComboBox = new System.Windows.Forms.ComboBox();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CurrYearTextBox = new System.Windows.Forms.TextBox();
             this.UnitsTextBox = new System.Windows.Forms.TextBox();
@@ -81,44 +81,44 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
-            // button1
+            // BackButton
             // 
-            this.button1.Location = new System.Drawing.Point(612, 333);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "BACK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BackButton.Location = new System.Drawing.Point(612, 333);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 40;
+            this.BackButton.Text = "BACK";
+            this.BackButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // CoReqRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.radioButton2.Location = new System.Drawing.Point(422, 294);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(104, 32);
-            this.radioButton2.TabIndex = 39;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Co-Requisite";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.CoReqRadioButton.AutoSize = true;
+            this.CoReqRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.CoReqRadioButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CoReqRadioButton.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CoReqRadioButton.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.CoReqRadioButton.Location = new System.Drawing.Point(422, 294);
+            this.CoReqRadioButton.Name = "CoReqRadioButton";
+            this.CoReqRadioButton.Size = new System.Drawing.Size(104, 32);
+            this.CoReqRadioButton.TabIndex = 39;
+            this.CoReqRadioButton.TabStop = true;
+            this.CoReqRadioButton.Text = "Co-Requisite";
+            this.CoReqRadioButton.UseVisualStyleBackColor = false;
             // 
-            // radioButton1
+            // PreReqRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.radioButton1.Location = new System.Drawing.Point(422, 265);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(106, 32);
-            this.radioButton1.TabIndex = 38;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Pre-Requisite";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.PreReqRadioButton.AutoSize = true;
+            this.PreReqRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.PreReqRadioButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PreReqRadioButton.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreReqRadioButton.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.PreReqRadioButton.Location = new System.Drawing.Point(422, 265);
+            this.PreReqRadioButton.Name = "PreReqRadioButton";
+            this.PreReqRadioButton.Size = new System.Drawing.Size(106, 32);
+            this.PreReqRadioButton.TabIndex = 38;
+            this.PreReqRadioButton.TabStop = true;
+            this.PreReqRadioButton.Text = "Pre-Requisite";
+            this.PreReqRadioButton.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
@@ -247,14 +247,14 @@
             this.CategoryComboBox.Size = new System.Drawing.Size(121, 21);
             this.CategoryComboBox.TabIndex = 32;
             // 
-            // button2
+            // ClearButton
             // 
-            this.button2.Location = new System.Drawing.Point(612, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "CLEAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ClearButton.Location = new System.Drawing.Point(612, 285);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearButton.TabIndex = 29;
+            this.ClearButton.Text = "CLEAR";
+            this.ClearButton.UseVisualStyleBackColor = true;
             // 
             // SaveButton
             // 
@@ -396,12 +396,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 535);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.NextButton);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.CoReqRadioButton);
+            this.Controls.Add(this.PreReqRadioButton);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label11);
@@ -410,7 +410,7 @@
             this.Controls.Add(this.OfferingComboBox);
             this.Controls.Add(this.CourseCodeComboBox);
             this.Controls.Add(this.CategoryComboBox);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CurrYearTextBox);
             this.Controls.Add(this.UnitsTextBox);
@@ -436,9 +436,9 @@
 
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.RadioButton CoReqRadioButton;
+        private System.Windows.Forms.RadioButton PreReqRadioButton;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
@@ -451,7 +451,7 @@
         private System.Windows.Forms.ComboBox OfferingComboBox;
         private System.Windows.Forms.ComboBox CourseCodeComboBox;
         private System.Windows.Forms.ComboBox CategoryComboBox;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.TextBox CurrYearTextBox;
         private System.Windows.Forms.TextBox UnitsTextBox;

@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.SubjectCodeTextBox = new System.Windows.Forms.TextBox();
+            this.IDNoTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SearchButton = new System.Windows.Forms.Button();
-            this.UnitsTextBox = new System.Windows.Forms.TextBox();
-            this.DescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.EDPCodeTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.EDPCodeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,15 +45,18 @@
             this.RoomCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitsCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubjectCodeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.EncoderTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.DatePicker = new System.Windows.Forms.DateTimePicker();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.CourseLabel = new System.Windows.Forms.Label();
+            this.YearLabel = new System.Windows.Forms.Label();
+            this.TotalUnitsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,12 +73,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Subject Enrollment Entry";
             // 
-            // SubjectCodeTextBox
+            // IDNoTextBox
             // 
-            this.SubjectCodeTextBox.Location = new System.Drawing.Point(325, 82);
-            this.SubjectCodeTextBox.Name = "SubjectCodeTextBox";
-            this.SubjectCodeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.SubjectCodeTextBox.TabIndex = 3;
+            this.IDNoTextBox.Location = new System.Drawing.Point(325, 82);
+            this.IDNoTextBox.Name = "IDNoTextBox";
+            this.IDNoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.IDNoTextBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -100,27 +100,6 @@
             this.SearchButton.TabIndex = 4;
             this.SearchButton.Text = "SEARCH";
             this.SearchButton.UseVisualStyleBackColor = true;
-            // 
-            // UnitsTextBox
-            // 
-            this.UnitsTextBox.Location = new System.Drawing.Point(386, 185);
-            this.UnitsTextBox.Name = "UnitsTextBox";
-            this.UnitsTextBox.Size = new System.Drawing.Size(100, 20);
-            this.UnitsTextBox.TabIndex = 8;
-            // 
-            // DescriptionTextBox
-            // 
-            this.DescriptionTextBox.Location = new System.Drawing.Point(386, 152);
-            this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(100, 20);
-            this.DescriptionTextBox.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(386, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
             // 
             // label4
             // 
@@ -158,12 +137,12 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Name";
             // 
-            // textBox2
+            // EDPCodeTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 241);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 12;
+            this.EDPCodeTextBox.Location = new System.Drawing.Point(172, 241);
+            this.EDPCodeTextBox.Name = "EDPCodeTextBox";
+            this.EDPCodeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.EDPCodeTextBox.TabIndex = 12;
             // 
             // label6
             // 
@@ -233,13 +212,6 @@
             this.SubjectCodeCol.HeaderText = "Subject Code";
             this.SubjectCodeCol.Name = "SubjectCodeCol";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(405, 450);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 15;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -252,12 +224,12 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Total Units";
             // 
-            // textBox4
+            // EncoderTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(191, 495);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 17;
+            this.EncoderTextBox.Location = new System.Drawing.Point(191, 495);
+            this.EncoderTextBox.Name = "EncoderTextBox";
+            this.EncoderTextBox.Size = new System.Drawing.Size(100, 20);
+            this.EncoderTextBox.TabIndex = 17;
             // 
             // label8
             // 
@@ -283,30 +255,30 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Date";
             // 
-            // dateTimePicker1
+            // DatePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(522, 492);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.DatePicker.Location = new System.Drawing.Point(522, 492);
+            this.DatePicker.Name = "DatePicker";
+            this.DatePicker.Size = new System.Drawing.Size(200, 20);
+            this.DatePicker.TabIndex = 19;
             // 
-            // button1
+            // BackButton
             // 
-            this.button1.Location = new System.Drawing.Point(522, 537);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "BACK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BackButton.Location = new System.Drawing.Point(522, 537);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 22;
+            this.BackButton.Text = "BACK";
+            this.BackButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ClearButton
             // 
-            this.button2.Location = new System.Drawing.Point(350, 537);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "CLEAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ClearButton.Location = new System.Drawing.Point(350, 537);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearButton.TabIndex = 21;
+            this.ClearButton.Text = "CLEAR";
+            this.ClearButton.UseVisualStyleBackColor = true;
             // 
             // SaveButton
             // 
@@ -317,32 +289,68 @@
             this.SaveButton.Text = "SAVE";
             this.SaveButton.UseVisualStyleBackColor = true;
             // 
+            // NameLabel
+            // 
+            this.NameLabel.BackColor = System.Drawing.Color.MintCream;
+            this.NameLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.NameLabel.Location = new System.Drawing.Point(338, 122);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(100, 23);
+            this.NameLabel.TabIndex = 23;
+            // 
+            // CourseLabel
+            // 
+            this.CourseLabel.BackColor = System.Drawing.Color.MintCream;
+            this.CourseLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.CourseLabel.Location = new System.Drawing.Point(338, 154);
+            this.CourseLabel.Name = "CourseLabel";
+            this.CourseLabel.Size = new System.Drawing.Size(100, 23);
+            this.CourseLabel.TabIndex = 24;
+            // 
+            // YearLabel
+            // 
+            this.YearLabel.BackColor = System.Drawing.Color.MintCream;
+            this.YearLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.YearLabel.Location = new System.Drawing.Point(338, 187);
+            this.YearLabel.Name = "YearLabel";
+            this.YearLabel.Size = new System.Drawing.Size(100, 23);
+            this.YearLabel.TabIndex = 25;
+            // 
+            // TotalUnitsLabel
+            // 
+            this.TotalUnitsLabel.BackColor = System.Drawing.Color.MintCream;
+            this.TotalUnitsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.TotalUnitsLabel.Location = new System.Drawing.Point(371, 447);
+            this.TotalUnitsLabel.Name = "TotalUnitsLabel";
+            this.TotalUnitsLabel.Size = new System.Drawing.Size(100, 23);
+            this.TotalUnitsLabel.TabIndex = 26;
+            // 
             // SubjectEnrollmentEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 586);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.TotalUnitsLabel);
+            this.Controls.Add(this.YearLabel);
+            this.Controls.Add(this.CourseLabel);
+            this.Controls.Add(this.NameLabel);
+            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DatePicker);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.EncoderTextBox);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.EDPCodeTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.UnitsTextBox);
-            this.Controls.Add(this.DescriptionTextBox);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SearchButton);
-            this.Controls.Add(this.SubjectCodeTextBox);
+            this.Controls.Add(this.IDNoTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SubjectEnrollmentEntry";
@@ -356,16 +364,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox SubjectCodeTextBox;
+        private System.Windows.Forms.TextBox IDNoTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button SearchButton;
-        private System.Windows.Forms.TextBox UnitsTextBox;
-        private System.Windows.Forms.TextBox DescriptionTextBox;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox EDPCodeTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn EDPCodeCol;
@@ -375,14 +380,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitsCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectCodeCol;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox EncoderTextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker DatePicker;
+        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.Label CourseLabel;
+        private System.Windows.Forms.Label YearLabel;
+        private System.Windows.Forms.Label TotalUnitsLabel;
     }
 }
