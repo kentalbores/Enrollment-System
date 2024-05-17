@@ -147,5 +147,24 @@ namespace Enrollment_System
             subjectScheduleEntry.Show();
             this.Hide();
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Form1 page2 = new Form1();
+            page2.Show();
+            this.Hide();
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            SubjectCodeTextBox.Text = "";
+            DescriptionTextBox.Text = "";
+            UnitsTextBox.Text = "";
+            OfferingComboBox.Text = "";
+            CategoryComboBox.TabIndex = 0;
+            CourseCodeComboBox.TabIndex = 0;
+            CurrYearTextBox.Text = "";
+            RequisiteTextBox.Text = "";
+        }
     }
 }

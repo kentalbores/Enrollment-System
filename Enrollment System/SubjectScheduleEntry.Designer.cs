@@ -74,6 +74,7 @@
             this.SubjectCodeTextBox.Name = "SubjectCodeTextBox";
             this.SubjectCodeTextBox.Size = new System.Drawing.Size(100, 20);
             this.SubjectCodeTextBox.TabIndex = 15;
+            this.SubjectCodeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SubjectCodeTextBox_KeyPress);
             // 
             // EDPCodeTextBox
             // 

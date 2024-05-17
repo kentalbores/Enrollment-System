@@ -38,13 +38,6 @@
             this.EDPCodeTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SubjectDataGridView = new System.Windows.Forms.DataGridView();
-            this.EDPCodeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DaysCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitsCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubjectCodeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.EncoderTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,6 +50,13 @@
             this.CourseLabel = new System.Windows.Forms.Label();
             this.YearLabel = new System.Windows.Forms.Label();
             this.TotalUnitsLabel = new System.Windows.Forms.Label();
+            this.EDPCodeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DaysCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitsCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubjectCodeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,7 +166,7 @@
             this.SubjectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SubjectDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EDPCodeCol,
-            this.StartTimeColumn,
+            this.StartTimeCol,
             this.EndTimeCol,
             this.DaysCol,
             this.RoomCol,
@@ -178,41 +178,6 @@
             this.SubjectDataGridView.RowHeadersVisible = false;
             this.SubjectDataGridView.Size = new System.Drawing.Size(662, 150);
             this.SubjectDataGridView.TabIndex = 13;
-            // 
-            // EDPCodeCol
-            // 
-            this.EDPCodeCol.HeaderText = "EDP Code";
-            this.EDPCodeCol.Name = "EDPCodeCol";
-            // 
-            // StartTimeColumn
-            // 
-            this.StartTimeColumn.HeaderText = "Start Time";
-            this.StartTimeColumn.Name = "StartTimeColumn";
-            // 
-            // EndTimeCol
-            // 
-            this.EndTimeCol.HeaderText = "End Time";
-            this.EndTimeCol.Name = "EndTimeCol";
-            // 
-            // DaysCol
-            // 
-            this.DaysCol.HeaderText = "Days";
-            this.DaysCol.Name = "DaysCol";
-            // 
-            // RoomCol
-            // 
-            this.RoomCol.HeaderText = "Room";
-            this.RoomCol.Name = "RoomCol";
-            // 
-            // UnitsCol
-            // 
-            this.UnitsCol.HeaderText = "Units";
-            this.UnitsCol.Name = "UnitsCol";
-            // 
-            // SubjectCodeCol
-            // 
-            this.SubjectCodeCol.HeaderText = "Subject Code";
-            this.SubjectCodeCol.Name = "SubjectCodeCol";
             // 
             // label7
             // 
@@ -290,6 +255,7 @@
             this.SaveButton.TabIndex = 20;
             this.SaveButton.Text = "SAVE";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // NameLabel
             // 
@@ -326,6 +292,41 @@
             this.TotalUnitsLabel.Name = "TotalUnitsLabel";
             this.TotalUnitsLabel.Size = new System.Drawing.Size(100, 23);
             this.TotalUnitsLabel.TabIndex = 26;
+            // 
+            // EDPCodeCol
+            // 
+            this.EDPCodeCol.HeaderText = "EDP Code";
+            this.EDPCodeCol.Name = "EDPCodeCol";
+            // 
+            // StartTimeCol
+            // 
+            this.StartTimeCol.HeaderText = "Start Time";
+            this.StartTimeCol.Name = "StartTimeCol";
+            // 
+            // EndTimeCol
+            // 
+            this.EndTimeCol.HeaderText = "End Time";
+            this.EndTimeCol.Name = "EndTimeCol";
+            // 
+            // DaysCol
+            // 
+            this.DaysCol.HeaderText = "Days";
+            this.DaysCol.Name = "DaysCol";
+            // 
+            // RoomCol
+            // 
+            this.RoomCol.HeaderText = "Room";
+            this.RoomCol.Name = "RoomCol";
+            // 
+            // UnitsCol
+            // 
+            this.UnitsCol.HeaderText = "Units";
+            this.UnitsCol.Name = "UnitsCol";
+            // 
+            // SubjectCodeCol
+            // 
+            this.SubjectCodeCol.HeaderText = "Subject Code";
+            this.SubjectCodeCol.Name = "SubjectCodeCol";
             // 
             // SubjectEnrollmentEntry
             // 
@@ -375,13 +376,6 @@
         private System.Windows.Forms.TextBox EDPCodeTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView SubjectDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EDPCodeCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StartTimeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EndTimeCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DaysCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitsCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectCodeCol;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox EncoderTextBox;
         private System.Windows.Forms.Label label8;
@@ -394,5 +388,12 @@
         private System.Windows.Forms.Label CourseLabel;
         private System.Windows.Forms.Label YearLabel;
         private System.Windows.Forms.Label TotalUnitsLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EDPCodeCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartTimeCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndTimeCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DaysCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitsCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectCodeCol;
     }
 }

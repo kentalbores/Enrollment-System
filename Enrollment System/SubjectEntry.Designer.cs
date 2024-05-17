@@ -37,6 +37,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.SubjectDataGridView = new System.Windows.Forms.DataGridView();
+            this.SubjectCodeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PreRequisiteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RequisiteTextBox = new System.Windows.Forms.TextBox();
             this.OfferingComboBox = new System.Windows.Forms.ComboBox();
             this.CourseCodeComboBox = new System.Windows.Forms.ComboBox();
@@ -55,10 +59,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.SubjectCodeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PreRequisiteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +89,7 @@
             this.BackButton.TabIndex = 40;
             this.BackButton.Text = "BACK";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // CoReqRadioButton
             // 
@@ -172,6 +173,26 @@
             this.SubjectDataGridView.Size = new System.Drawing.Size(419, 164);
             this.SubjectDataGridView.TabIndex = 34;
             // 
+            // SubjectCodeColumn
+            // 
+            this.SubjectCodeColumn.HeaderText = "Subject Code";
+            this.SubjectCodeColumn.Name = "SubjectCodeColumn";
+            // 
+            // DescriptionColumn
+            // 
+            this.DescriptionColumn.HeaderText = "Description";
+            this.DescriptionColumn.Name = "DescriptionColumn";
+            // 
+            // UnitsColumn
+            // 
+            this.UnitsColumn.HeaderText = "Units";
+            this.UnitsColumn.Name = "UnitsColumn";
+            // 
+            // PreRequisiteColumn
+            // 
+            this.PreRequisiteColumn.HeaderText = "Co/Pre";
+            this.PreRequisiteColumn.Name = "PreRequisiteColumn";
+            // 
             // RequisiteTextBox
             // 
             this.RequisiteTextBox.Location = new System.Drawing.Point(252, 283);
@@ -235,6 +256,7 @@
             this.ClearButton.TabIndex = 29;
             this.ClearButton.Text = "CLEAR";
             this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // SaveButton
             // 
@@ -370,26 +392,6 @@
             this.label1.Size = new System.Drawing.Size(242, 41);
             this.label1.TabIndex = 16;
             this.label1.Text = "Subject Entry";
-            // 
-            // SubjectCodeColumn
-            // 
-            this.SubjectCodeColumn.HeaderText = "Subject Code";
-            this.SubjectCodeColumn.Name = "SubjectCodeColumn";
-            // 
-            // DescriptionColumn
-            // 
-            this.DescriptionColumn.HeaderText = "Description";
-            this.DescriptionColumn.Name = "DescriptionColumn";
-            // 
-            // UnitsColumn
-            // 
-            this.UnitsColumn.HeaderText = "Units";
-            this.UnitsColumn.Name = "UnitsColumn";
-            // 
-            // PreRequisiteColumn
-            // 
-            this.PreRequisiteColumn.HeaderText = "Co/Pre";
-            this.PreRequisiteColumn.Name = "PreRequisiteColumn";
             // 
             // SubjectEntry
             // 
