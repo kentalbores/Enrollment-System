@@ -31,25 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.IDNoTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.SearchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.EDPCodeTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SubjectDataGridView = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.EncoderTextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.DatePicker = new System.Windows.Forms.DateTimePicker();
-            this.BackButton = new System.Windows.Forms.Button();
-            this.ClearButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
-            this.NameLabel = new System.Windows.Forms.Label();
-            this.CourseLabel = new System.Windows.Forms.Label();
-            this.YearLabel = new System.Windows.Forms.Label();
-            this.TotalUnitsLabel = new System.Windows.Forms.Label();
             this.EDPCodeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StartTimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndTimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +44,17 @@
             this.RoomCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitsCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubjectCodeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.EncoderTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.DatePicker = new System.Windows.Forms.DateTimePicker();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.CourseLabel = new System.Windows.Forms.Label();
+            this.YearLabel = new System.Windows.Forms.Label();
+            this.TotalUnitsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +73,7 @@
             // 
             // IDNoTextBox
             // 
-            this.IDNoTextBox.Location = new System.Drawing.Point(325, 82);
+            this.IDNoTextBox.Location = new System.Drawing.Point(371, 80);
             this.IDNoTextBox.Name = "IDNoTextBox";
             this.IDNoTextBox.Size = new System.Drawing.Size(100, 20);
             this.IDNoTextBox.TabIndex = 3;
@@ -87,20 +85,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(233, 79);
+            this.label2.Location = new System.Drawing.Point(279, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID No.";
-            // 
-            // SearchButton
-            // 
-            this.SearchButton.Location = new System.Drawing.Point(485, 82);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(75, 20);
-            this.SearchButton.TabIndex = 4;
-            this.SearchButton.Text = "SEARCH";
-            this.SearchButton.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -179,6 +168,41 @@
             this.SubjectDataGridView.Size = new System.Drawing.Size(662, 150);
             this.SubjectDataGridView.TabIndex = 13;
             // 
+            // EDPCodeCol
+            // 
+            this.EDPCodeCol.HeaderText = "EDP Code";
+            this.EDPCodeCol.Name = "EDPCodeCol";
+            // 
+            // StartTimeCol
+            // 
+            this.StartTimeCol.HeaderText = "Start Time";
+            this.StartTimeCol.Name = "StartTimeCol";
+            // 
+            // EndTimeCol
+            // 
+            this.EndTimeCol.HeaderText = "End Time";
+            this.EndTimeCol.Name = "EndTimeCol";
+            // 
+            // DaysCol
+            // 
+            this.DaysCol.HeaderText = "Days";
+            this.DaysCol.Name = "DaysCol";
+            // 
+            // RoomCol
+            // 
+            this.RoomCol.HeaderText = "Room";
+            this.RoomCol.Name = "RoomCol";
+            // 
+            // UnitsCol
+            // 
+            this.UnitsCol.HeaderText = "Units";
+            this.UnitsCol.Name = "UnitsCol";
+            // 
+            // SubjectCodeCol
+            // 
+            this.SubjectCodeCol.HeaderText = "Subject Code";
+            this.SubjectCodeCol.Name = "SubjectCodeCol";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -231,25 +255,17 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(522, 537);
+            this.BackButton.Location = new System.Drawing.Point(482, 537);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 23);
             this.BackButton.TabIndex = 22;
             this.BackButton.Text = "BACK";
             this.BackButton.UseVisualStyleBackColor = true;
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.Location = new System.Drawing.Point(350, 537);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(75, 23);
-            this.ClearButton.TabIndex = 21;
-            this.ClearButton.Text = "CLEAR";
-            this.ClearButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(172, 537);
+            this.SaveButton.Location = new System.Drawing.Point(216, 537);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 20;
@@ -293,41 +309,6 @@
             this.TotalUnitsLabel.Size = new System.Drawing.Size(100, 23);
             this.TotalUnitsLabel.TabIndex = 26;
             // 
-            // EDPCodeCol
-            // 
-            this.EDPCodeCol.HeaderText = "EDP Code";
-            this.EDPCodeCol.Name = "EDPCodeCol";
-            // 
-            // StartTimeCol
-            // 
-            this.StartTimeCol.HeaderText = "Start Time";
-            this.StartTimeCol.Name = "StartTimeCol";
-            // 
-            // EndTimeCol
-            // 
-            this.EndTimeCol.HeaderText = "End Time";
-            this.EndTimeCol.Name = "EndTimeCol";
-            // 
-            // DaysCol
-            // 
-            this.DaysCol.HeaderText = "Days";
-            this.DaysCol.Name = "DaysCol";
-            // 
-            // RoomCol
-            // 
-            this.RoomCol.HeaderText = "Room";
-            this.RoomCol.Name = "RoomCol";
-            // 
-            // UnitsCol
-            // 
-            this.UnitsCol.HeaderText = "Units";
-            this.UnitsCol.Name = "UnitsCol";
-            // 
-            // SubjectCodeCol
-            // 
-            this.SubjectCodeCol.HeaderText = "Subject Code";
-            this.SubjectCodeCol.Name = "SubjectCodeCol";
-            // 
             // SubjectEnrollmentEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +320,6 @@
             this.Controls.Add(this.CourseLabel);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.BackButton);
-            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DatePicker);
             this.Controls.Add(this.label9);
@@ -352,7 +332,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.IDNoTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -369,7 +348,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox IDNoTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
@@ -382,7 +360,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker DatePicker;
         private System.Windows.Forms.Button BackButton;
-        private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label CourseLabel;

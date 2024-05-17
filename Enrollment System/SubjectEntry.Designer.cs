@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.CoReqRadioButton = new System.Windows.Forms.RadioButton();
@@ -62,18 +61,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(612, 431);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "EXIT";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(612, 381);
+            this.NextButton.Location = new System.Drawing.Point(623, 414);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 23);
             this.NextButton.TabIndex = 41;
@@ -83,7 +73,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(612, 333);
+            this.BackButton.Location = new System.Drawing.Point(623, 366);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 23);
             this.BackButton.TabIndex = 40;
@@ -250,7 +240,7 @@
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(612, 285);
+            this.ClearButton.Location = new System.Drawing.Point(623, 318);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(75, 23);
             this.ClearButton.TabIndex = 29;
@@ -260,7 +250,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(612, 235);
+            this.SaveButton.Location = new System.Drawing.Point(623, 268);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 28;
@@ -399,7 +389,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 535);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CoReqRadioButton);
@@ -435,8 +424,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.RadioButton CoReqRadioButton;

@@ -22,53 +22,60 @@ namespace Enrollment_System
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            OleDbConnection thisConnection = new OleDbConnection(connectionString);
-            string sql = "SELECT * FROM SUBJECTFILE";
-            OleDbDataAdapter thisAdapter = new OleDbDataAdapter(sql, thisConnection);
-            OleDbCommandBuilder thisBuilder = new OleDbCommandBuilder(thisAdapter);
+            try
+            {
+                OleDbConnection thisConnection = new OleDbConnection(connectionString);
+                string sql = "SELECT * FROM SUBJECTFILE";
+                OleDbDataAdapter thisAdapter = new OleDbDataAdapter(sql, thisConnection);
+                OleDbCommandBuilder thisBuilder = new OleDbCommandBuilder(thisAdapter);
 
-            DataSet thisDataSet = new DataSet();
-            thisAdapter.Fill(thisDataSet, "SubjectFile");
+                DataSet thisDataSet = new DataSet();
+                thisAdapter.Fill(thisDataSet, "SubjectFile");
 
-            DataRow thisRow = thisDataSet.Tables["SubjectFile"].NewRow();
-            thisRow["SFSUBJCODE"] = SubjectCodeTextBox.Text;
-            thisRow["SFSUBJDESC"] = DescriptionTextBox.Text;
-            thisRow["SFSUBJUNITS"] = Convert.ToInt16(UnitsTextBox.Text);
-            thisRow["SFSUBJCATEGORY"] = CategoryComboBox.Text.Substring(0, 3);
-            thisRow["SFSUBJREGOFRNG"] = Convert.ToUInt16(OfferingComboBox.Text.Substring(0, 1));
-            thisRow["SFSUBJCOURSECODE"] = CourseCodeComboBox.Text;
-            thisRow["SFSUBJCURRYEAR"] = CurrYearTextBox.Text;
+                DataRow thisRow = thisDataSet.Tables["SubjectFile"].NewRow();
+                thisRow["SFSUBJCODE"] = SubjectCodeTextBox.Text;
+                thisRow["SFSUBJDESC"] = DescriptionTextBox.Text;
+                thisRow["SFSUBJUNITS"] = Convert.ToInt16(UnitsTextBox.Text);
+                thisRow["SFSUBJCATEGORY"] = CategoryComboBox.Text.Substring(0, 3);
+                thisRow["SFSUBJREGOFRNG"] = Convert.ToUInt16(OfferingComboBox.Text.Substring(0, 1));
+                thisRow["SFSUBJCOURSECODE"] = CourseCodeComboBox.Text;
+                thisRow["SFSUBJCURRYEAR"] = CurrYearTextBox.Text;
 
-            thisDataSet.Tables["SubjectFile"].Rows.Add(thisRow);
-            thisAdapter.Update(thisDataSet, "SubjectFile");
-
-
-            string categ = "";
-            categ += PreReqRadioButton.Checked ? "PR" : "CR"; 
+                thisDataSet.Tables["SubjectFile"].Rows.Add(thisRow);
+                thisAdapter.Update(thisDataSet, "SubjectFile");
 
 
-
-            //requisites
-            sql = "SELECT * FROM SUBJECTPREQFILE";
-            thisAdapter = new OleDbDataAdapter(sql, thisConnection);
-            thisBuilder = new OleDbCommandBuilder(thisAdapter);
-            thisDataSet = new DataSet();
-            thisAdapter.Fill(thisDataSet, "SubjectPreqFile");
-            thisRow = thisDataSet.Tables["SubjectPreqFile"].NewRow();
-
-            
-            
-            thisRow["SUBJCODE"] = SubjectCodeTextBox.Text;
-            thisRow["SUBJPRECODE"] = RequisiteTextBox.Text;
-            thisRow["SUBJCATEGORY"] = categ;
-
-            thisDataSet.Tables["SubjectPreqFile"].Rows.Add(thisRow);
-            thisAdapter.Update(thisDataSet, "SubjectPreqFile");
+                string categ = "";
+                categ += PreReqRadioButton.Checked ? "PR" : "CR";
 
 
 
+                //requisites
+                sql = "SELECT * FROM SUBJECTPREQFILE";
+                thisAdapter = new OleDbDataAdapter(sql, thisConnection);
+                thisBuilder = new OleDbCommandBuilder(thisAdapter);
+                thisDataSet = new DataSet();
+                thisAdapter.Fill(thisDataSet, "SubjectPreqFile");
+                thisRow = thisDataSet.Tables["SubjectPreqFile"].NewRow();
 
-            MessageBox.Show("Entries Recorded");
+
+
+                thisRow["SUBJCODE"] = SubjectCodeTextBox.Text;
+                thisRow["SUBJPRECODE"] = RequisiteTextBox.Text;
+                thisRow["SUBJCATEGORY"] = categ;
+
+                thisDataSet.Tables["SubjectPreqFile"].Rows.Add(thisRow);
+                thisAdapter.Update(thisDataSet, "SubjectPreqFile");
+
+
+
+
+                MessageBox.Show("Entries Recorded");
+            }
+            catch
+            {
+                MessageBox.Show("Please Input Appropriate Data");
+            }
 
 
         }

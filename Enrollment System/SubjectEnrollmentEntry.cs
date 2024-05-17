@@ -66,19 +66,6 @@ namespace Enrollment_System
                         
 
                     }
-                    /*if (thisDataReader["SFSTUDIDNO"].ToString().Trim().ToUpper() == IDNoTextBox.Text.Trim().ToUpper())
-                    {
-                        found = true;
-
-                        name = thisDataReader["SFSTUDLNAME"].ToString() + " " +
-                               thisDataReader["SFSTUDFNAME"].ToString() + " " +
-                               thisDataReader["SFSTUDMNAME"].ToString().Substring(0, 1);
-                        course = thisDataReader["SFSTUDCOURSE"].ToString();
-                        year = thisDataReader["STFSTUDYEAR"].ToString();
-                        break;
-
-                    }*/
-
                 }
 
 
@@ -157,23 +144,9 @@ namespace Enrollment_System
                                     {
                                         if (thisReader1["SFSUBJCODE"].ToString().Trim().ToLower() == thisReader2["SFSUBJCODE"].ToString().Trim().ToLower())
                                         {
-                                            /*for (int size = 0; size < SubjectDataGridView.Rows.Count; size++)
-                                            {
-                                                DateTime startTime = DateTime.Parse(thisReader1["SFSTARTTIME"].ToString());
-                                                DateTime endTime = DateTime.Parse(thisReader1["SFENDTIME"].ToString());
+                                            //check if conflict p-----p------->
 
-                                                DateTime start = DateTime.Parse(SubjectDataGridView.Rows[size].Cells[2].Value.ToString());
-                                                DateTime end = DateTime.Parse(SubjectDataGridView.Rows[size].Cells[3].Value.ToString());
-
-                                                *//*MessageBox.Show(startTime.ToString() + endTime.ToString() + start.ToString() + end.ToString());
-
-                                                if (((start >= startTime && start < endTime) || (end > startTime && end <= endTime)) || (start < startTime && end > endTime))
-                                                {
-                                                    conflict = true;
-                                                    break;
-                                                }*//*
-                                            }*/
-
+                                            //
                                             if (conflict == false)
                                             {
                                                 int row = SubjectDataGridView.Rows.Add();
@@ -208,40 +181,6 @@ namespace Enrollment_System
                         }
                     }
 
-
-                    /*if (alreadyAdded == false)
-                    {
-                        if (searching == true)
-                        {
-                            if (IDNoTextBox.Text != "ID Number")
-                            {
-                                if (EDPCodeTextBox.Text != "EDP Code")
-                                {
-                                    
-                                    if (result == false)
-                                    {
-                                        MessageBox.Show("No subject has been added.", "Information");
-                                    }
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Enter your EDP Code", "Message");
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Please Enter your ID Number", "Message");
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Initial Student Search!", "Message");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("This Student Cannot Have Subjects Updated or Added!", "Message");
-                    }*/
                 }
                 catch (Exception x)
                 {
@@ -398,6 +337,13 @@ namespace Enrollment_System
             {
                 MessageBox.Show(x.Message, "Error");
             }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            SubjectScheduleEntry entry = new SubjectScheduleEntry();
+            entry.Show();
+            this.Hide();
         }
     }
 }

@@ -145,6 +145,7 @@
     <Content Include="Albores.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="assets\bg3.png" />
     <None Include="assets\bg2.jpg" />
     <None Include="assets\bg1.jpg" />
   </ItemGroup>
